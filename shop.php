@@ -50,13 +50,13 @@ if(isset($_POST['add_to_cart'])){
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>our shop</h3>
-   <p> <a href="home.php">home</a> / shop </p>
+   <h3>loja</h3>
+   <p> <a href="home.php">início</a> / loja </p>
 </div>
 
 <section class="products">
 
-   <h1 class="title">latest products</h1>
+   <h1 class="title">Produtos</h1>
 
    <div class="box-container">
 
@@ -78,7 +78,7 @@ if(isset($_POST['add_to_cart'])){
       <?php
          }
       }else{
-         echo '<p class="empty">no products added yet!</p>';
+         echo '<p class="empty">nenhum produto foi adicionado ainda!</p>';
       }
       ?>
    </div>

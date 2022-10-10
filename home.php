@@ -61,7 +61,7 @@ if(isset($_POST['add_to_cart'])){
 
 <section class="products">
 
-   <h1 class="title">latest products</h1>
+   <h1 class="title">Últimos produtos</h1>
 
    <div class="box-container">
 
@@ -83,7 +83,7 @@ if(isset($_POST['add_to_cart'])){
       <?php
          }
       }else{
-         echo '<p class="empty">no products added yet!</p>';
+         echo '<p class="empty">nenhum produto foi adicionado ainda!</p>';
       }
       ?>
    </div>
@@ -94,30 +94,13 @@ if(isset($_POST['add_to_cart'])){
 
 </section>
 
-<section class="about">
-
-   <div class="flex">
-
-      <div class="image">
-         <img src="images/about-img.jpg" alt="">
-      </div>
-
-      <div class="content">
-         <h3>about us</h3>
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quos enim minima ipsa dicta officia corporis ratione saepe sed adipisci?</p>
-         <a href="about.php" class="btn">read more</a>
-      </div>
-
-   </div>
-
-</section>
 
 <section class="home-contact">
 
    <div class="content">
-      <h3>have any questions?</h3>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cumque exercitationem repellendus, amet ullam voluptatibus?</p>
-      <a href="contact.php" class="white-btn">contact us</a>
+      <h3>Possui alguma dúvida?</h3>
+      <p>Aqui você pode fazer contato com profissionais para atendê-los.</p>
+      <a href="contact.php" class="white-btn">Abrir chat</a>
    </div>
 
 </section>
