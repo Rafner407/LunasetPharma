@@ -51,7 +51,7 @@ if(!isset($admin_id)){
             };
          ?>
          <h3>$<?php echo $total_pendings; ?>/-</h3>
-         <p>total pendings</p>
+         <p>total de pedidos</p>
       </div>
 
       <div class="box">
@@ -66,7 +66,7 @@ if(!isset($admin_id)){
             };
          ?>
          <h3>$<?php echo $total_completed; ?>/-</h3>
-         <p>completed payments</p>
+         <p>pagamentos feitos</p>
       </div>
 
       <div class="box">
@@ -75,7 +75,7 @@ if(!isset($admin_id)){
             $number_of_orders = mysqli_num_rows($select_orders);
          ?>
          <h3><?php echo $number_of_orders; ?></h3>
-         <p>order placed</p>
+         <p>pedidos realizados</p>
       </div>
 
       <div class="box">
@@ -84,7 +84,7 @@ if(!isset($admin_id)){
             $number_of_products = mysqli_num_rows($select_products);
          ?>
          <h3><?php echo $number_of_products; ?></h3>
-         <p>products added</p>
+         <p>produtos adicionados</p>
       </div>
 
       <div class="box">
@@ -93,7 +93,7 @@ if(!isset($admin_id)){
             $number_of_users = mysqli_num_rows($select_users);
          ?>
          <h3><?php echo $number_of_users; ?></h3>
-         <p>normal users</p>
+         <p>usuários</p>
       </div>
 
       <div class="box">
@@ -102,7 +102,7 @@ if(!isset($admin_id)){
             $number_of_admins = mysqli_num_rows($select_admins);
          ?>
          <h3><?php echo $number_of_admins; ?></h3>
-         <p>admin users</p>
+         <p>administradores</p>
       </div>
 
       <div class="box">
@@ -111,7 +111,7 @@ if(!isset($admin_id)){
             $number_of_account = mysqli_num_rows($select_account);
          ?>
          <h3><?php echo $number_of_account; ?></h3>
-         <p>total accounts</p>
+         <p>total de contas</p>
       </div>
 
       <div class="box">
@@ -120,7 +120,7 @@ if(!isset($admin_id)){
             $number_of_messages = mysqli_num_rows($select_messages);
          ?>
          <h3><?php echo $number_of_messages; ?></h3>
-         <p>new messages</p>
+         <p>novas mensagens</p>
       </div>
 
    </div>

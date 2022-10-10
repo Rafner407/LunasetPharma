@@ -101,14 +101,14 @@ if(isset($_POST['update_product'])){
 
 <section class="add-products">
 
-   <h1 class="title">shop products</h1>
+   <h1 class="title">produtos da loja</h1>
 
    <form action="" method="post" enctype="multipart/form-data">
-      <h3>add product</h3>
-      <input type="text" name="name" class="box" placeholder="enter product name" required>
-      <input type="number" min="0" name="price" class="box" placeholder="enter product price" required>
+      <h3>adicionar produto</h3>
+      <input type="text" name="name" class="box" placeholder="Digite o nome do produto" required>
+      <input type="number" min="0" name="price" class="box" placeholder="Digite o preço do produto" required>
       <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
-      <input type="submit" value="add product" name="add_product" class="btn">
+      <input type="submit" value="adicionar" name="add_product" class="btn">
    </form>
 
 </section>
@@ -136,7 +136,7 @@ if(isset($_POST['update_product'])){
       <?php
          }
       }else{
-         echo '<p class="empty">no products added yet!</p>';
+         echo '<p class="empty">nenhum produto foi adicionado ainda!</p>';
       }
       ?>
    </div>

@@ -52,9 +52,8 @@ if(isset($_POST['add_to_cart'])){
 <section class="home">
 
    <div class="content">
-      <h3>Hand Picked Book to your door.</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quod? Reiciendis ut porro iste totam.</p>
-      <a href="about.php" class="white-btn">discover more</a>
+      <h3>Sejam bem-vindos!</h3>
+      <p>Aqui você vai encontrar produtos diretamente da farmácia sem sair de casa!</p>
    </div>
 
 </section>
@@ -89,7 +88,7 @@ if(isset($_POST['add_to_cart'])){
    </div>
 
    <div class="load-more" style="margin-top: 2rem; text-align:center">
-      <a href="shop.php" class="option-btn">load more</a>
+      <a href="shop.php" class="option-btn">carregar mais</a>
    </div>
 
 </section>

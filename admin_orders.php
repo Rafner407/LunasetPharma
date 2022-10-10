@@ -48,7 +48,7 @@ if(isset($_GET['delete'])){
 
 <section class="orders">
 
-   <h1 class="title">placed orders</h1>
+   <h1 class="title">pedidos realizados</h1>
 
    <div class="box-container">
       <?php
@@ -80,7 +80,7 @@ if(isset($_GET['delete'])){
       <?php
          }
       }else{
-         echo '<p class="empty">no orders placed yet!</p>';
+         echo '<p class="empty">nenhum pedido foi realizado ainda!</p>';
       }
       ?>
    </div>

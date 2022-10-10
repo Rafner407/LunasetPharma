@@ -39,7 +39,7 @@ if(isset($_GET['delete'])){
 
 <section class="messages">
 
-   <h1 class="title"> messages </h1>
+   <h1 class="title"> mensagens </h1>
 
    <div class="box-container">
    <?php
@@ -59,7 +59,7 @@ if(isset($_GET['delete'])){
    <?php
       };
    }else{
-      echo '<p class="empty">you have no messages!</p>';
+      echo '<p class="empty">você ainda não tem nenhuma mensagem!</p>';
    }
    ?>
    </div>

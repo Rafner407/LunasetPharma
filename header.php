@@ -15,12 +15,6 @@ if(isset($message)){
 
    <div class="header-1">
       <div class="flex">
-         <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-         </div>
          <p> novo <a href="login.php">login</a> | <a href="register.php">registro</a> </p>
       </div>
    </div>

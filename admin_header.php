@@ -15,14 +15,14 @@ if(isset($message)){
 
    <div class="flex">
 
-      <a href="admin_page.php" class="logo">Admin<span>Panel</span></a>
+      <a href="admin_page.php" class="logo"><span>Lunaset</span> painel do admin</a>
 
       <nav class="navbar">
-         <a href="admin_page.php">home</a>
-         <a href="admin_products.php">products</a>
-         <a href="admin_orders.php">orders</a>
-         <a href="admin_users.php">users</a>
-         <a href="admin_contacts.php">messages</a>
+         <a href="admin_page.php">início</a>
+         <a href="admin_products.php">produtos</a>
+         <a href="admin_orders.php">pedidos</a>
+         <a href="admin_users.php">usuários</a>
+         <a href="admin_contacts.php">mensagens</a>
       </nav>
 
       <div class="icons">
