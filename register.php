@@ -13,13 +13,13 @@ if(isset($_POST['submit'])){
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
 
    if(mysqli_num_rows($select_users) > 0){
-      $message[] = 'user already exist!';
+      $message[] = 'Usuário já existente!';
    }else{
       if($pass != $cpass){
-         $message[] = 'confirm password not matched!';
+         $message[] = 'Senhas não combinam!';
       }else{
          mysqli_query($conn, "INSERT INTO `users`(name, email, password, alergia) VALUES('$name', '$email', '$cpass', '$alerg')") or die('query failed');
-         $message[] = 'registered successfully!';
+         $message[] = 'registro sucedido!';
          header('location:login.php');
       }
    }
