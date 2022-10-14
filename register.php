@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
    $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
-   $user_type = $_POST['user_type'];
+   $alerg = mysqli_real_escape_string($conn, $_POST['alergia']);
 
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
 
@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
       if($pass != $cpass){
          $message[] = 'confirm password not matched!';
       }else{
-         mysqli_query($conn, "INSERT INTO `users`(name, email, password, user_type) VALUES('$name', '$email', '$cpass', '$user_type')") or die('query failed');
+         mysqli_query($conn, "INSERT INTO `users`(name, email, password, alergia) VALUES('$name', '$email', '$cpass', '$alerg')") or die('query failed');
          $message[] = 'registered successfully!';
          header('location:login.php');
       }
@@ -67,11 +67,13 @@ if(isset($message)){
       <input type="text" name="name" placeholder="Digite seu nome" required class="box">
       <input type="email" name="email" placeholder="Digite seu email" required class="box">
       <input type="password" name="password" placeholder="Digite sua senha" required class="box">
-      <input type="password" name="cpassword" placeholder="confirme sua senha" required class="box">
-      <select name="user_type" class="box">
-         <option value="user">user</option>
-         <option value="admin">admin</option>
+      <input type="password" name="cpassword" placeholder="Confirme sua senha" required class="box">
+      <select class="box" id="selection"  onChange="selectOnchange();">
+         <option>Possui alergia a algum medicamento?</option>
+         <option value="sim">sim</option>
+         <option value="nao">não</option>
       </select>
+      <input type="text" name="alergia" placeholder="Qual?" required class="box" id="alerg" hidden/>
       <input type="submit" name="submit" value="registrar" class="btn">
       <p>já possui uma conta? <a href="login.php">faça login aqui</a></p>
    </form>
@@ -79,4 +81,15 @@ if(isset($message)){
 </div>
 
 </body>
+
+<script>
+function selectOnchange(){
+    var select = document.getElementById('selection').value 
+    if(select == "sim")
+        document.getElementById("alerg").style.display="block";
+    else
+        document.getElementById("alerg").style.display="none";
+}
+ </script>
+
 </html>
