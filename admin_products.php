@@ -130,12 +130,11 @@ if(isset($_POST['update_product'])){
             while($fetch_products = mysqli_fetch_assoc($select_products)){
       ?>
       <div class="box">
-         <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
+         <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="" style="height: 250px; width: 250px;">
          <div class="name"><?php echo $fetch_products['name']; ?></div>
-         <div class="price">$<?php echo $fetch_products['price']; ?>/-</div>
-         <div class="descricao"><?php echo $fetch_products['descricao']; ?></div>
-         <a href="admin_products.php?update=<?php echo $fetch_products['id']; ?>" class="option-btn">update</a>
-         <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
+         <div class="price">R$<?php echo $fetch_products['price']; ?></div>
+         <a href="admin_products.php?update=<?php echo $fetch_products['id']; ?>" class="option-btn">atualizar</a>
+         <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">deletar</a>
       </div>
       <?php
          }
@@ -164,8 +163,8 @@ if(isset($_POST['update_product'])){
       <input type="number" name="update_price" value="<?php echo $fetch_update['price']; ?>" min="0" class="box" required placeholder="Digite o preço do produto">
       <input type="text" name="update_desc" value="<?php echo $fetch_update['descricao']; ?>" class="box" required placeholder="Digite uma descrição para o produto">
       <input type="file" class="box" name="update_image" accept="image/jpg, image/jpeg, image/png">
-      <input type="submit" value="update" name="update_product" class="btn">
-      <input type="reset" value="cancel" id="close-update" class="option-btn">
+      <input type="submit" value="atualizar" name="update_product" class="btn">
+      <input type="reset" value="cancelar" id="close-update" class="option-btn">
    </form>
    <?php
          }
