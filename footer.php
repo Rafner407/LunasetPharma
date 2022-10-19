@@ -36,6 +36,6 @@
 
    </div>
 
-   <p class="credit"> made by: <span>Emanuelle e Rafner</span> </p>
+   <p class="credit"> feito por: <span>Emanuelle e Rafner</span> </p>
 
 </section>
