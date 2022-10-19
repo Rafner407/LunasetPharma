@@ -16,7 +16,6 @@ if(isset($message)){
    <div class="flex">
 
       <a href="admin_page.php" class="logo"><span>Lunaset</span> painel do admin</a>
-
       <nav class="navbar">
          <a href="admin_page.php">início</a>
          <a href="admin_products.php">produtos</a>

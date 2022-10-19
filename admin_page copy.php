@@ -12,6 +12,8 @@ if(!isset($admin_id)){
 
 ?>
 
+<?php include "admin_header copy.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,11 +30,6 @@ if(!isset($admin_id)){
 
 </head>
 <body>
-   
-<?php include 'admin_header.php'; ?>
-
-<!-- admin dashboard section starts  -->
-
 <section class="dashboard">
 
    <h1 class="title">dashboard</h1>
@@ -50,7 +47,7 @@ if(!isset($admin_id)){
                };
             };
          ?>
-         <h3>R$<?php echo $total_pendings; ?></h3>
+         <h3>$<?php echo $total_pendings; ?>/-</h3>
          <p>total de pedidos</p>
       </div>
 
@@ -65,7 +62,7 @@ if(!isset($admin_id)){
                };
             };
          ?>
-         <h3>R$<?php echo $total_completed; ?></h3>
+         <h3>$<?php echo $total_completed; ?>/-</h3>
          <p>pagamentos feitos</p>
       </div>
 
