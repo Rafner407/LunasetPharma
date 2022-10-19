@@ -87,7 +87,7 @@ if(isset($_GET['delete_all'])){
    </div>
 
    <div style="margin-top: 2rem; text-align:center;">
-      <a href="cart.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>" onclick="return confirm('delete all from cart?');">deletar tudo</a>
+      <a href="cart.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>" onclick="return confirm('deletar todo os produtos?');">deletar tudo</a>
    </div>
 
    <div class="cart-total">
