@@ -115,6 +115,11 @@ ALTER TABLE `users`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
+INSERT INTO products(name, price, image, descricao) VALUES ('TYLENOL', '7', 'tylenol.jpg', 'O Tylenol 500mg é um analgésico e antitérmico com o princípio ativo paracetamol e é indicado para a redução da febre e alívio temporário da dor leve a moderada, como aquelas associadas a resfriados comuns, dor de cabeça, dor no corpo, dores musculares, dor de dente, dor nas costas, dores leves associadas a artrites e cólicas menstruais. A embalagem contém 2 comprimidos revestidos de liberação imediata contendo 500mg de paracetamol cada. Dose = 1 ou 2 comprimidos. Uso adulto e pediátrico acima de 12 anos.'), 
+('DORFLEX', '5', 'dorflex.jpg', 'Dorflex age na dor e relaxa a tensão muscular causada pela má postura e movimentos repetitivos. Uma potente combinação de analgésico e relaxante muscular disponível em versões de 10, 24, 36, 50 comprimidos e gotas.'),
+('LORATADINA', '8', 'loratadina.jpg', 'A loratadina é um remédio antialérgico usado no alívio dos sintomas de rinite alérgica como coceira nasal, tosse alérgica, coriza, espirros, ardor e coceira nos olhos.')
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
