@@ -14,6 +14,12 @@ if(isset($message)){
 <header class="header">
 
    <div class="flex">
+   <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+   </ul>   
+      <a href="admin_page.php" class="logo"><span>Lunaset</span> painel do admin</a>
 
       <div class="icons">
          <div id="menu-btn" class="fas fa-bars"></div>

@@ -29,7 +29,6 @@ if(!isset($admin_id)){
 </head>
 <body>
    
-<?php include 'admin_header.php'; ?>
 <?php include 'MainSideBar.php'; ?>
 
 <!-- admin dashboard section starts  -->
