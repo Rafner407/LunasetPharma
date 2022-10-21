@@ -12,7 +12,6 @@ if(!isset($admin_id)){
 
 ?>
 
-<?php include "admin_header copy.php"; ?>
 <?php include "MainSideBar.php"; ?>
 
 <!DOCTYPE html>

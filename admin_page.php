@@ -30,6 +30,7 @@ if(!isset($admin_id)){
 <body>
    
 <?php include 'admin_header.php'; ?>
+<?php include 'MainSideBar.php'; ?>
 
 <!-- admin dashboard section starts  -->
 
