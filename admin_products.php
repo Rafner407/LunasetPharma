@@ -184,7 +184,7 @@ if(isset($_POST['update_product'])){
       <input type="number" name="update_price" value="<?php echo $fetch_update['price']; ?>" min="0" class="box" required placeholder="Digite o preço do produto">
       <input type="text" name="update_desc" value="<?php echo $fetch_update['descricao']; ?>" class="box" required placeholder="Digite uma descrição para o produto">
       <input type="file" class="box" name="update_image" accept="image/jpg, image/jpeg, image/png">
-      <input type="submit" value="atualizar" name="update_product" class="btn">
+      <input type="submit" value="atualizar" name="update_product" class="btn" style="margin-bottom: 15px;">
       <input type="reset" value="cancelar" id="close-update" class="option-btn">
    </form>
    <?php

@@ -42,9 +42,9 @@
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div>
+        <div class="image">
           <img src="AdminLTE-3.2.0/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" style="height: 30px; width: 30px; margin-left: 10px; margin-top: 5px">
-        </div class="image">
+        </div>
         <div class="info">
           <a href="logout.php" class="d-block" style="font-size: 20px;"><?php echo $_SESSION['admin_name']; ?></a>
         </div>
