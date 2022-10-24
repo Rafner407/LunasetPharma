@@ -30,27 +30,8 @@
 </head>
 
 <body>
-<header class="header">
-
-   <div class="flex">  
-      <a href="admin_page.php" class="logo"><span>Lunaset</span> painel do admin</a>
-
-      <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="user-btn" class="fas fa-user"></div>
-      </div>
-
-      <div class="account-box">
-         <p>nome de usuário: <span><?php echo $_SESSION['admin_name']; ?></span></p>
-         <p>email: <span><?php echo $_SESSION['admin_email']; ?></span></p>
-         <a href="logout.php" class="delete-btn">logout</a>
-         <div>novo <a href="login.php">login</a> | <a href="register.php">registro</a></div>
-      </div>
-
-   </div>
-
-</header>  
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #000000;">
+ 
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #000000; position: fixed;">
     <!-- Brand Logo -->
     <a href="admin_page.php" class="brand-link"  style="font-size:25px;">
       <img src="AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8; margin-top: 2px; margin-right: 10px;">

@@ -31,6 +31,27 @@ if(!isset($admin_id)){
    
 <?php include 'MainSideBar.php'; ?>
 
+<header class="header">
+
+   <div class="flex">  
+      <a href="admin_page.php" class="logo">início</a>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+      </div>
+
+      <div class="account-box">
+         <p>nome de usuário: <span><?php echo $_SESSION['admin_name']; ?></span></p>
+         <p>email: <span><?php echo $_SESSION['admin_email']; ?></span></p>
+         <a href="logout.php" class="delete-btn">logout</a>
+         <div>novo <a href="login.php">login</a> | <a href="register.php">registro</a></div>
+      </div>
+
+   </div>
+
+</header> 
+
 <!-- admin dashboard section starts  -->
 
 <section class="dashboard">
