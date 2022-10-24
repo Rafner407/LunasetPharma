@@ -5,6 +5,8 @@
 
 $user_id = $_SESSION['user_id'];
 
+$query = 'SELECT * FROM `products` WHERE id = "'.$_GET['id'].'"';
+
 if(!isset($user_id)){
    header('location:login.php');
 }

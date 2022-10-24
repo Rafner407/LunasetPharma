@@ -44,7 +44,7 @@ if(isset($_GET['delete'])){
 
       <div class="icons">
          <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="user-btn" class="fas fa-user"></div>
+         <button id="user-btn" class="btn">sair</button>
       </div>
 
       <div class="account-box">

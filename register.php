@@ -8,6 +8,7 @@ if(isset($_POST['submit'])){
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
    $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
+   $image = $_FILES['image']['name'];
    $alerg = mysqli_real_escape_string($conn, $_POST['alergia']);
 
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
@@ -18,7 +19,7 @@ if(isset($_POST['submit'])){
       if($pass != $cpass){
          $message[] = 'Senhas não combinam!';
       }else{
-         mysqli_query($conn, "INSERT INTO `users`(name, email, password, alergia) VALUES('$name', '$email', '$cpass', '$alerg')") or die('query failed');
+         mysqli_query($conn, "INSERT INTO `users`(name, email, password, image, alergia) VALUES('$name', '$email', '$cpass', '$image', '$alerg')") or die('query failed');
          $message[] = 'registro sucedido!';
          header('location:login.php');
       }
@@ -68,6 +69,7 @@ if(isset($message)){
       <input type="email" name="email" placeholder="Digite seu email" required class="box">
       <input type="password" name="password" placeholder="Digite sua senha" required class="box">
       <input type="password" name="cpassword" placeholder="Confirme sua senha" required class="box">
+      <input type="file" name="image" required class="box">
       <select class="box" id="selection"  onChange="selectOnchange();">
          <option>Possui alergia a algum medicamento?</option>
          <option value="sim">sim</option>

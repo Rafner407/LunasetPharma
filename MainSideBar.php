@@ -1,3 +1,9 @@
+<?php
+
+$admin_id = $_SESSION['admin_id'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,9 +48,16 @@
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="AdminLTE-3.2.0/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" style="height: 30px; width: 30px; margin-left: 10px; margin-top: 5px">
-        </div>
+        <?php  
+         $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE id='$admin_id'") or die('query failed');
+         if(mysqli_num_rows($select_users) > 0){
+            while($fetch_users = mysqli_fetch_assoc($select_users)){
+         ?>
+            <img src="uploaded_img/<?php echo $fetch_users['image']; ?>" alt="" style="height: 30px; width: 30px; border-radius: 50%; margin-left: 10px;">
+            <?php
+         }
+      }
+         ?>
         <div class="info">
           <a href="logout.php" class="d-block" style="font-size: 20px;"><?php echo $_SESSION['admin_name']; ?></a>
         </div>
