@@ -6,6 +6,7 @@ session_start();
 
 $user_id = $_SESSION['user_id'];
 
+
 if(!isset($user_id)){
    header('location:login.php');
 }
@@ -70,7 +71,7 @@ if(isset($_POST['add_to_cart'])){
             while($fetch_products = mysqli_fetch_assoc($select_products)){
       ?>
      <form action="" method="post" class="box">
-      <a href="product.php?product=<?php echo $product['id'] ?>"><img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="" style="height: 250px; width: 250px;" ></a>
+      <a href="product.php?product=<?php echo $fetch_products['id'] ?>"><img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="" style="height: 250px; width: 250px;" ></a>
       <div class="name"><?php echo $fetch_products['name']; ?></div>
       <div class="price">R$<?php echo $fetch_products['price']; ?></div>
       <input type="number" min="1" name="product_quantity" value="1" class="qty">

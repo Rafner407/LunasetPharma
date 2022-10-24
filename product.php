@@ -5,7 +5,8 @@
 
 $user_id = $_SESSION['user_id'];
 
-$query = 'SELECT * FROM `products` WHERE id = "'.$_GET['id'].'"';
+$query = 'SELECT * FROM products WHERE id = "'.$_GET['product'].'"';
+
 
 if(!isset($user_id)){
    header('location:login.php');
@@ -27,53 +28,41 @@ if(!isset($user_id)){
 
 <?php include 'header.php'; ?>
     <!-- Produto -->
+    
+<?php    
+$select_products = mysqli_query($conn, $query) or die('query failed');
+         if(mysqli_num_rows($select_products) > 0){
+            while($fetch_products = mysqli_fetch_assoc($select_products)){
+                ?>
     <section class="single-product">
         <div class="container">
-            <div class="row">
-                </div>
-                <div class="col-md-7">
-                    <p class="new-arrival">NOVO</p>
-                    <h2>Nome do produto</h2>
-                    <p>Código do produto: PRC3928</p>
-                    
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
+            <!-- Div 1 -->
+            <div class="row" style="display: flex;">
 
-                    <p class="price">R$ 15.00</p>
-                    <p><b>Disponibilidade:</b> Em estoque</p>
-                    <p><b>Condição:</b> Novo</p>
-                    <p><b>Marca:</b> Marca</p>
-                    <label>Quantidade: </label>
-                    <input type="text" value="1">
-                    <button type="button" class="btn btn-primary">Adicionar ao carrinho</button>
+            <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 300px; margin: auto; text-align: center; font-family: arial; font-size: 20px; padding-bottom: 25px;">
+                <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" style="height: 300px; width: 300px;">
+                <h1><?php echo $fetch_products['name']?></h1>
+                <p class="price" style="color: grey; font-size: 18px;">R$<?php echo $fetch_products['price']?>,00</p>
+                <p style="font-size: 15px;"><b>Disponibilidade:</b> Em estoque</p>
+                <button type="button" class="btn btn-primary">Adicionar ao carrinho</button>
+            </div>
+
+                <div class="col-sm-6">
+                    <h2>Descrição do produto</h2>
+                    <p><?php echo $fetch_products['descricao']?></p>
                 </div>
+
+            </div>
+            <!-- Div 1 -->
             </div>
         </div>
     </section>
 
     <!-- Descrição do produto -->
-    <section class="product-description">
-        <div class="container">
-            <h6>Descrição do produto</h6>
-            <p>Caderno de poesias
-
-                Caderno de poesias<br/>
-                é um belo lugar.<br/>
-                Tantas coisas lindas<br/>
-                que eu gostaria de falar.<br/>
-                Eu falo em forma de versos<br/>
-                para todos poderem escutar.<br/>
-                Agora você já sabe<br/>
-                por que os poetas passam os dias<br/>
-                escrevendo em seus cadernos de poesias.</p>
-
-            <hr>    
-        </div>
-    </section>
-
+                <?php
+            }
+        }
+            ?>
 
 
     <?php include 'footer.php'; ?>

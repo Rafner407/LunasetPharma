@@ -125,7 +125,7 @@ INSERT INTO products(name, price, image, descricao) VALUES ('TYLENOL', '7', 'tyl
 ('SHAMPOO INFANTIL', '23', 'shampooi.jpg', '•Limpa suavemente e protege os cabelos e o couro cabeludo.
 •Deve ser aplicado por um adulto ou sob sua supervisão, massageando os cabelos molhados do bebê.
 •Não usar se o couro cabeludo estiver ferido ou irritado.
-•Fórmula chega de lágrimas, não irrita os olhos
+•Fórmula chega de lágrimas, não irrita os olhos.
 •Tem pH fisiológico, é hipoalergénico e livre de corantes, parabenos e sulfatos.'),
 ('PROTETOR SOLAR', '64', 'protetorsolar.jpg', '•Protetor solar facial com cor - Tom 2 Claro.
 •Não obstrui os poros.
