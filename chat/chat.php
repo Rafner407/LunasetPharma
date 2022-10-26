@@ -1,19 +1,19 @@
 <?php
 
-include '../config.php'; 
+$conn = mysqli_connect('localhost','root','','shop_db') or die('connection failed');
 
 session_start();
 
 $user_id = $_SESSION['user_id'];
 
-if(isset($user_id)){
-    if($_POST['name'] != ""){
-        $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
-    }
-    else{
-        echo '<span class="error">Please type in a name</span>';
-    }
+if(!isset($user_id)){
+    header('location:../login.php');
+} else {
+    $_SESSION['name'] = stripslashes(htmlspecialchars($_SESSION['name']));
 }
+$select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE id= '1'") or die('query failed');
+$fetch_users = mysqli_fetch_assoc($select_users);
+
 
  
 ?>
@@ -23,7 +23,7 @@ if(isset($user_id)){
     <head>
         <meta charset="utf-8" />
  
-        <title>Tuts+ Chat Application</title>
+        <title>Chat</title>
         <meta name="description" content="Tuts+ Chat Application" />
         <link rel="stylesheet" href="styleChat.css" />
     </head>
@@ -36,8 +36,7 @@ if(isset($user_id)){
     ?>
         <div id="wrapper">
             <div id="menu">
-                <p class="welcome">Welcome, <b><?php echo $_SESSION['name']; ?></b></p>
-                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+                <p class="welcome">Welcome, <b><?php echo $fetch_users['name']; ?></b></p>
             </div>
  
             <div id="chatbox">
