@@ -40,7 +40,7 @@ $admin_id = $_SESSION['admin_id'];
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #000000; position: fixed;">
     <!-- Brand Logo -->
     <a href="admin_page.php" class="brand-link"  style="font-size:25px;">
-      <img src="AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8; margin-top: 2px; margin-right: 10px;">
+      <img src="uploaded_img/LUNA.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8; margin-top: 2px;">
       <span class="brand-text font-weight-light" style=" color: var(--purple);">Lunaset </span> Admin
     </a>
 
