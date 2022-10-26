@@ -54,7 +54,9 @@ if(isset($_POST['send'])){
    <p> <a href="home.php">início</a> / contato </p>
 </div>
 
-<section class="contact">
+<?php include 'chat/chat.php'; ?>
+
+<!-- <section class="contact">
 
    <form action="" method="post">
       <h3>Diga algo!</h3>
@@ -65,7 +67,7 @@ if(isset($_POST['send'])){
       <input type="submit" value="enviar" name="send" class="btn">
    </form>
 
-</section>
+</section> -->
 
 
 
