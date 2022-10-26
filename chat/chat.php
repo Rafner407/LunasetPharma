@@ -6,7 +6,6 @@ session_start();
 
 $user_id = $_SESSION['user_id'];
 
-
 if(isset($user_id)){
     if($_POST['name'] != ""){
         $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
