@@ -23,10 +23,10 @@ if(isset($message)){
       <div class="flex">
          <div class="row" style="display: flex">
          <div>
-         <img src="uploaded_img/LUNA.png" style="height: 40px; width: 40px; border-radius: 50%;">
+         <img src="uploaded_img/LUNA.png" style="height: 40px; width: 40px; border-radius: 50%; float: right">
          </div>
          <div>
-         <a href="home.php" class="logo" style="color: black; position: absolute">Lunaset</a>
+         <a href="home.php" class="logo" style="color: black; float: left; margin-top: 7px;">Lunaset</a>
          </div>
          </div>
 
