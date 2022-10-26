@@ -75,6 +75,11 @@ CREATE TABLE `users` (
   `alergia` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE `categoria`(
+	`id` int PRIMARY KEY AUTO_INCREMENT not null,
+  `categoria` varchar (50)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`);
@@ -134,7 +139,7 @@ INSERT INTO products(name, price, image, descricao) VALUES ('TYLENOL', '7', 'tyl
 •Ajuda a prevenir o envelhecimento precoce da pele.'),
 ('SABONETE EM BARRA', '5', 'sabonetebarra.jpg', '•Nutre a pele enquanto remove a sujeira do dia a dia. •Deixa a sua pele macia, bem cuidada e saudável. •Contém pH neutro respeitando a microflora da pele. •Agradável fragrância e frescor da erva doce. •Dermatologicamente recomendado.');
 
-
+INSERT INTO categoria(categoria) VALUES ('medicamentos'), ('cosméticos'), ('infantil'), ('vitaminas e suplementos');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
