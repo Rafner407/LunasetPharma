@@ -69,9 +69,10 @@ if(isset($_GET['delete'])){
       ?>
       <div class="box">
          <p> id do usuário: <span><?php echo $fetch_users['id']; ?></span> </p>
-         <p> nome do usuário : <span><?php echo $fetch_users['name']; ?></span> </p>
-         <p> email : <span><?php echo $fetch_users['email']; ?></span> </p>
-         <p> tipo de usuário : <span style="color:<?php if($fetch_users['user_type'] == 'admin'){ echo 'var(--orange)'; } ?>"><?php echo $fetch_users['user_type']; ?></span> </p>
+         <p> nome do usuário: <span><?php echo $fetch_users['name']; ?></span> </p>
+         <p> alergias: <span><?php echo $fetch_users['alergia']; ?></span> </p>
+         <p> email: <span><?php echo $fetch_users['email']; ?></span> </p>
+         <p> tipo de usuário: <span style="color:<?php if($fetch_users['user_type'] == 'admin'){ echo 'var(--orange)'; } ?>"><?php echo $fetch_users['user_type']; ?></span> </p>
          <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('deletar este usuário?');" class="delete-btn">deletar usuário</a>
       </div>
       <?php

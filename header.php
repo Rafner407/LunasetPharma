@@ -17,15 +17,18 @@ if(isset($message)){
 
 <header class="header">
 
-   <div class="header-1">
-      <div class="flex">
-         <p> novo <a href="login.php">login</a> | <a href="register.php">registro</a> </p>
-      </div>
-   </div>
+
 
    <div class="header-2">
       <div class="flex">
-         <a href="home.php" class="logo">Lunaset</a>
+         <div class="row" style="display: flex">
+         <div>
+         <img src="uploaded_img/LUNA.png" style="height: 40px; width: 40px; border-radius: 50%;">
+         </div>
+         <div>
+         <a href="home.php" class="logo" style="color: black; position: absolute">Lunaset</a>
+         </div>
+         </div>
 
          <nav class="navbar">
             <a href="home.php">início</a>
