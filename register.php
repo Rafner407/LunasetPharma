@@ -69,7 +69,7 @@ if(isset($message)){
       <input type="email" name="email" placeholder="Digite seu email" required class="box">
       <input type="password" name="password" placeholder="Digite sua senha" required class="box">
       <input type="password" name="cpassword" placeholder="Confirme sua senha" required class="box">
-      <input type="file" name="image" required class="box">
+      <input type="file" class="box">
       <select class="box" id="selection"  onChange="selectOnchange();">
          <option>Possui alergia a algum medicamento?</option>
          <option value="sim">sim</option>
