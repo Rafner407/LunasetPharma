@@ -22,7 +22,6 @@ if(isset($message)){
       <a href="admin_page.php" class="logo"><span>Lunaset</span> painel do admin</a>
 
       <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
          <div id="user-btn" class="fas fa-user"></div>
       </div>
 

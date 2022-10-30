@@ -105,7 +105,7 @@ if(isset($_POST['update_product'])){
       <a href="admin_products.php" class="logo">produtos</a>
 
       <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="menu-btn" class="fas fa-bars" style="color: white"></div>
          <button id="user-btn" class="btn">sair</button>
       </div>
 
