@@ -32,7 +32,12 @@ if(isset($message)){
 
          <nav class="navbar">
             <a href="home.php">início</a>
-            <a href="shop.php">comprar</a>
+               <a href="#" class="dropdown">comprar</a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">medicamentos</a></li>
+                  <li><a class="dropdown-item" href="#">cosméticos</a></li>
+                  <li><a class="dropdown-item" href="#">infantil</a></li>
+               </ul>
             <a href="contact.php">contato</a>
             <a href="orders.php">pedidos</a>
          </nav>

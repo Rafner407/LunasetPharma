@@ -62,7 +62,8 @@ CREATE TABLE `products` (
   `name` varchar(100) NOT NULL,
   `price` int(100) NOT NULL,
   `image` varchar(100) NOT NULL,
-  `descricao` varchar(1000) NOT NULL
+  `descricao` varchar(1000) NOT NULL,
+  `id_categoria` int not null
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -121,23 +122,23 @@ ALTER TABLE `users`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
-INSERT INTO products(name, price, image, descricao) VALUES ('TYLENOL', '7', 'tylenol.jpg', 'O Tylenol 500mg é um analgésico e antitérmico com o princípio ativo paracetamol e é indicado para a redução da febre e alívio temporário da dor leve a moderada, como aquelas associadas a resfriados comuns, dor de cabeça, dor no corpo, dores musculares, dor de dente, dor nas costas, dores leves associadas a artrites e cólicas menstruais. A embalagem contém 2 comprimidos revestidos de liberação imediata contendo 500mg de paracetamol cada. Dose = 1 ou 2 comprimidos. Uso adulto e pediátrico acima de 12 anos.'), 
-('DORFLEX', '5', 'dorflex.jpg', 'Dorflex age na dor e relaxa a tensão muscular causada pela má postura e movimentos repetitivos. Uma potente combinação de analgésico e relaxante muscular disponível em versões de 10, 24, 36, 50 comprimidos e gotas.'),
-('LORATADINA', '8', 'loratadina.jpg', 'A loratadina é um remédio antialérgico usado no alívio dos sintomas de rinite alérgica como coceira nasal, tosse alérgica, coriza, espirros, ardor e coceira nos olhos.'),
-('PARACETAMOL', '6', 'paracetamol.jpg', 'O Paracetamol é indicado em adultos para a redução da febre e para o alívio temporário de dores leves a moderadas, tais como: dores associadas a resfriados comuns, dor de cabeça, dor no corpo, dor de dente, dor nas costas, dores musculares, dores leves associadas a artrites e cólicas menstruais. '),
-('DIPIRONA', '15', 'dipirona.jpg', 'Este medicamento é indicado como antitérmico (para febre) e analgésico (para dor).'),
-('SIMETICONA', '15', 'simeticona.jpg', 'Simeticona atua no estômago e no intestino, diminuindo a tensão superficial dos líquidos digestivos, levando ao rompimento das bolhas(gases).'),
+INSERT INTO products(name, price, image, descricao, id_categoria) VALUES ('TYLENOL', '7', 'tylenol.jpg', 'O Tylenol 500mg é um analgésico e antitérmico com o princípio ativo paracetamol e é indicado para a redução da febre e alívio temporário da dor leve a moderada, como aquelas associadas a resfriados comuns, dor de cabeça, dor no corpo, dores musculares, dor de dente, dor nas costas, dores leves associadas a artrites e cólicas menstruais. A embalagem contém 2 comprimidos revestidos de liberação imediata contendo 500mg de paracetamol cada. Dose = 1 ou 2 comprimidos. Uso adulto e pediátrico acima de 12 anos.', '1'), 
+('DORFLEX', '5', 'dorflex.jpg', 'Dorflex age na dor e relaxa a tensão muscular causada pela má postura e movimentos repetitivos. Uma potente combinação de analgésico e relaxante muscular disponível em versões de 10, 24, 36, 50 comprimidos e gotas.', '1'),
+('LORATADINA', '8', 'loratadina.jpg', 'A loratadina é um remédio antialérgico usado no alívio dos sintomas de rinite alérgica como coceira nasal, tosse alérgica, coriza, espirros, ardor e coceira nos olhos.', '1'),
+('PARACETAMOL', '6', 'paracetamol.jpg', 'O Paracetamol é indicado em adultos para a redução da febre e para o alívio temporário de dores leves a moderadas, tais como: dores associadas a resfriados comuns, dor de cabeça, dor no corpo, dor de dente, dor nas costas, dores musculares, dores leves associadas a artrites e cólicas menstruais.', '1'),
+('DIPIRONA', '15', 'dipirona.jpg', 'Este medicamento é indicado como antitérmico (para febre) e analgésico (para dor).', '1'),
+('SIMETICONA', '15', 'simeticona.jpg', 'Simeticona atua no estômago e no intestino, diminuindo a tensão superficial dos líquidos digestivos, levando ao rompimento das bolhas(gases).', '1'),
 ('SHAMPOO INFANTIL', '23', 'shampooi.jpg', '•Limpa suavemente e protege os cabelos e o couro cabeludo.
 •Deve ser aplicado por um adulto ou sob sua supervisão, massageando os cabelos molhados do bebê.
 •Não usar se o couro cabeludo estiver ferido ou irritado.
 •Fórmula chega de lágrimas, não irrita os olhos.
-•Tem pH fisiológico, é hipoalergénico e livre de corantes, parabenos e sulfatos.'),
+•Tem pH fisiológico, é hipoalergénico e livre de corantes, parabenos e sulfatos.', '3'),
 ('PROTETOR SOLAR', '64', 'protetorsolar.jpg', '•Protetor solar facial com cor - Tom 2 Claro.
 •Não obstrui os poros.
 •Efeito mate e toque seco.
 •Textura foundant e efeito base.
-•Ajuda a prevenir o envelhecimento precoce da pele.'),
-('SABONETE EM BARRA', '5', 'sabonetebarra.jpg', '•Nutre a pele enquanto remove a sujeira do dia a dia. •Deixa a sua pele macia, bem cuidada e saudável. •Contém pH neutro respeitando a microflora da pele. •Agradável fragrância e frescor da erva doce. •Dermatologicamente recomendado.');
+•Ajuda a prevenir o envelhecimento precoce da pele.', '2'),
+('SABONETE EM BARRA', '5', 'sabonetebarra.jpg', '•Nutre a pele enquanto remove a sujeira do dia a dia. •Deixa a sua pele macia, bem cuidada e saudável. •Contém pH neutro respeitando a microflora da pele. •Agradável fragrância e frescor da erva doce. •Dermatologicamente recomendado.', '2');
 
 INSERT INTO categoria(categoria) VALUES ('medicamentos'), ('cosméticos'), ('infantil'), ('vitaminas e suplementos');
 
