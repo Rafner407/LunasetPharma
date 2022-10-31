@@ -114,6 +114,7 @@
    
   .msgln {
     margin: 0 0 5px 0;
+    font-size: 18px;
   }
    
   .msgln span.left-info {
@@ -142,6 +143,7 @@
 
   .msglnA {
     margin: 0 0 5px 0;
+    font-size: 18px;
   }
    
   .msglnA span.left-info {

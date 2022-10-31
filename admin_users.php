@@ -43,7 +43,7 @@ if(isset($_GET['delete'])){
       <a href="admin_users.php" class="logo">usuários</a>
 
       <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="menu-btn" class="fas fa-bars" style="color: white"></div>
          <button id="user-btn" class="btn">sair</button>
       </div>
 

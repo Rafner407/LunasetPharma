@@ -37,7 +37,7 @@ if(!isset($admin_id)){
       <a href="admin_page.php" class="logo">início</a>
 
       <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="menu-btn" class="fas fa-bars" style="color: white"></div>
          <button id="user-btn" class="btn">sair</button>
       </div>
 

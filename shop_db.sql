@@ -53,7 +53,7 @@ CREATE TABLE `orders` (
   `total_products` varchar(1000) NOT NULL,
   `total_price` int(100) NOT NULL,
   `placed_on` varchar(50) NOT NULL,
-  `payment_status` varchar(20) NOT NULL DEFAULT 'pending'
+  `payment_status` varchar(20) NOT NULL DEFAULT 'pendente'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -73,7 +73,8 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `user_type` varchar(20) NOT NULL DEFAULT 'user',
-  `alergia` varchar(100) NOT NULL
+  `image` varchar (50) NOT NULL
+  `alergia` varchar(100) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `categoria`(
@@ -116,6 +117,8 @@ ALTER TABLE `orders`
 
 ALTER TABLE `products`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `users` CHANGE `image` `image` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'profile.jpg';
 
 
 ALTER TABLE `users`

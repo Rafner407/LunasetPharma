@@ -38,6 +38,7 @@ while ($fetch_users = mysqli_fetch_assoc($select_users));{
 </head>
 <body>
    
+<?php include 'MainSideBar.php'; ?>
 
 <header class="header">
 
@@ -45,7 +46,7 @@ while ($fetch_users = mysqli_fetch_assoc($select_users));{
       <a href="admin_contacts.php" class="logo">mensagens</a>
 
       <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="menu-btn" class="fas fa-bars" style="color: white"></div>
          <button id="user-btn" class="btn">sair</button>
       </div>
 
