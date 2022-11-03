@@ -23,7 +23,7 @@ if(isset($_POST['add_product'])){
 
    $select_product_name = mysqli_query($conn, "SELECT name FROM `products` WHERE name = '$name'") or die('query failed');
 
-   if(mysqli_num_rows($select_product_name) > 0){
+   if(mysqli_num_rows($select_product_name) > 0){  
       $message[] = 'produto já foi adicionado';
    }else{
       $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name, price, descricao, image, id_categoria) VALUES('$name', '$price', '$desc','$image', '$categoria')") or die('query failed');
@@ -92,6 +92,7 @@ if(isset($_POST['update_product'])){
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="icon" href="uploaded_img/LUNA.png">
 
    <!-- custom admin css file link  -->
    <link rel="stylesheet" href="css/admin_style.css">

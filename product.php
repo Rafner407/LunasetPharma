@@ -38,6 +38,7 @@ if(isset($_POST['add_to_cart'])){
     <link rel="stylesheet" href="css/style.css">
     <!-- CSS only -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="uploaded_img/LUNA.png">
     <script src="https://kit.fontawesome.com/3a65185406.js" crossorigin="anonymous"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>

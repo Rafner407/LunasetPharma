@@ -32,7 +32,21 @@ if(isset($message)){
 
          <nav class="navbar">
             <a href="home.php">início</a>
-            <a href="shop.php">comprar</a>
+            <?php  
+         $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE id='$user_id'") or die('query failed');
+         if(mysqli_num_rows($select_users) > 0){
+            while($fetch_users = mysqli_fetch_assoc($select_users)){
+         ?>
+            <a class="image" href="#" alt="" style="height: 30px; width: 30px; border-radius: 50%;">comprar</a>
+            <?php
+         }
+      }
+         ?>
+         <div class="user-box">
+            <p>nome de usuário : <span><?php echo $_SESSION['user_name']; ?></span></p>
+            <p>email : <span><?php echo $_SESSION['user_email']; ?></span></p>
+            <a href="logout.php" class="delete-btn">logout</a>
+         </div>
             <a href="contact.php">contato</a>
             <a href="orders.php">pedidos</a>
          </nav>
