@@ -60,6 +60,13 @@ if(isset($_POST['add_to_cart'])){
    <h1 class="title">Infantil</h1>
 
    <div class="box-container">
+   <div style="position: absolute; font-size: 20px; left: 10px; border-radius: 20px; width: 420px; height: 90%; vertical-align: middle">
+         <h3 style="margin-left: 10px; margin-top: 5px; text-transform: uppercase; color: #333;">categorias</h3>
+         <a href="shop.php" class="btn" style="margin-left: 10px;">medicamentos</a>
+         <a href="shop2.php" class="btn" style="margin-left: 10px;">cosméticos</a>
+         <a href="shop3.php" class="btn" style="margin-left: 10px;">infantil</a>
+         <a href="shop4.php" class="btn" style="margin-left: 10px;">vitaminas e suplementos</a>
+      </div>
 
       <?php  
          $select_products = mysqli_query($conn, "SELECT * FROM `products` WHERE id_categoria=3;") or die('query failed');
