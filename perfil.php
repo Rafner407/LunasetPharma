@@ -15,33 +15,7 @@ if(isset($message)){
 
 ?>
 
-<head>
-   <link rel="stylesheet" href="css/style.css">
-</head>
-
-<header class="header">
-
-
-
-   <div class="header-2">
-      <div class="flex">
-         <div class="row" style="display: flex">
-         <div>
-         <img src="uploaded_img/LUNA.png" style="height: 40px; width: 40px; border-radius: 50%; float: right">
-         </div>
-         <div>
-         <a href="home.php" class="logo" style="color: black; float: left; margin-top: 7px;">Lunaset</a>
-         </div>
-         </div>
-
-         <nav class="navbar">
-            <a href="home.php">início</a>
-            <a href="shop.php">comprar</a>   
-            <a href="contact.php">contato</a>
-            <a href="orders.php">pedidos</a>
-         </nav>
-
-         <div class="icons">
+<div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             <a href="search_page.php" class="fas fa-search"></a>
             <?php  
@@ -66,8 +40,3 @@ if(isset($message)){
             <p>email : <span><?php echo $_SESSION['user_email']; ?></span></p>
             <a href="logout.php" class="delete-btn">logout</a>
          </div>
-
-      </div>
-   </div>
-
-</header>

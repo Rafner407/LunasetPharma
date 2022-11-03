@@ -343,7 +343,37 @@ section{
    margin-top: 0;
 }
 
+.header .header-2 .flex .product-box{
+   position: absolute;
+   top:120%; right:2rem;
+   background-color: var(--white);
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   padding:2rem;
+   text-align: center;
+   width: 30rem;
+   display: none;
+   animation: fadeIn .2s linear;
+}
 
+.header .header-2 .flex .product-box.active{
+   display: inline-block;
+}
+
+.header .header-2 .flex .product-box p{
+   font-size: 2rem;
+   color:var(--light-color);
+   margin-bottom: 1.5rem;
+}
+
+.header .header-2 .flex .product-box p span{
+   color:var(--purple);
+}
+
+.header .header-2 .flex .product-box .delete-btn{
+   margin-top: 0;
+}
 
 .home{
    min-height: 70vh;

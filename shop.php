@@ -58,8 +58,14 @@ if(isset($_POST['add_to_cart'])){
 <section class="products">
 
    <h1 class="title">Medicamentos</h1>
+   
    <div class="box-container">
-
+      <div style="position: absolute">
+         <li>medicamentos</li>
+         <li>cosméticos</li>
+         <li>infantil</li>
+         <li>vitaminas e suplementos</li>
+      </div>
       <?php  
          $select_products = mysqli_query($conn, "SELECT * FROM `products` WHERE id_categoria=1;") or die('query failed');
          if(mysqli_num_rows($select_products) > 0){

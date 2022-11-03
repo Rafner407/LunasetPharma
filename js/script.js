@@ -5,6 +5,13 @@ document.querySelector('#user-btn').onclick = () =>{
    navbar.classList.remove('active');
 }
 
+let productBox = document.querySelector('.header .header-2 .product-box');
+
+document.querySelector('#product-btn').onclick = () =>{
+   productBox.classList.toggle('active');
+   navbar.classList.remove('active');
+}
+
 let navbar = document.querySelector('.header .header-2 .navbar');
 
 document.querySelector('#menu-btn').onclick = () =>{
