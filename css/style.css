@@ -343,6 +343,8 @@ section{
    margin-top: 0;
 }
 
+
+
 .home{
    min-height: 70vh;
    background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../images/MainPharma.jpg) no-repeat;
@@ -859,15 +861,6 @@ section{
    background-color: var(--light-bg);
    border-radius: .5rem;
 }
-
-
-
-
-
-
-
-
- 
 
 .footer{
    background-color: var(--light-bg);

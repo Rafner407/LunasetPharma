@@ -16,6 +16,7 @@ if(isset($_POST['add_product'])){
    $price = $_POST['price'];
    $desc = $_POST['descricao'];
    $image = $_FILES['image']['name'];
+   $categoria = $_POST['categoria'];
    $image_size = $_FILES['image']['size'];
    $image_tmp_name = $_FILES['image']['tmp_name'];
    $image_folder = 'uploaded_img/'.$image;
@@ -25,7 +26,7 @@ if(isset($_POST['add_product'])){
    if(mysqli_num_rows($select_product_name) > 0){
       $message[] = 'produto já foi adicionado';
    }else{
-      $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name, price, descricao, image) VALUES('$name', '$price', '$desc','$image')") or die('query failed');
+      $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name, price, descricao, image, id_categoria) VALUES('$name', '$price', '$desc','$image', '$categoria')") or die('query failed');
 
       if($add_product_query){
          if($image_size > 2000000){
@@ -55,8 +56,9 @@ if(isset($_POST['update_product'])){
    $update_name = $_POST['update_name'];
    $update_price = $_POST['update_price'];
    $update_desc = $_POST['update_descricao'];
+   $update_categoria = $_POST['update_categoria'];
 
-   mysqli_query($conn, "UPDATE `products` SET name = '$update_name', price = '$update_price', descricao= '$update_desc' WHERE id = '$update_p_id'") or die('query failed');
+   mysqli_query($conn, "UPDATE `products` SET name = '$update_name', price = '$update_price', descricao= '$update_desc', id_categoria= '$update_categoria' WHERE id = '$update_p_id'") or die('query failed');
 
    $update_image = $_FILES['update_image']['name'];
    $update_image_tmp_name = $_FILES['update_image']['tmp_name'];
@@ -132,6 +134,7 @@ if(isset($_POST['update_product'])){
       <input type="number" min="0" name="price" class="box" placeholder="Digite o preço do produto" required>
       <input type="text" name="descricao" class="box" placeholder="Digite uma descrição para o produto" required>
       <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
+      <input type="text" name="categoria" class="box" placeholder="Digite a categoria do produto" required>
       <input type="submit" value="adicionar" name="add_product" class="btn">
    </form>
 
@@ -179,10 +182,11 @@ if(isset($_POST['update_product'])){
    <form action="" method="post" enctype="multipart/form-data">
       <input type="hidden" name="update_p_id" value="<?php echo $fetch_update['id']; ?>">
       <input type="hidden" name="update_old_image" value="<?php echo $fetch_update['image']; ?>">
-      <img src="uploaded_img/<?php echo $fetch_update['image']; ?>" alt="">
+      <img src="uploaded_img/<?php echo $fetch_update['image']; ?>" alt="" style="height: 250px; width: 250px;">
       <input type="text" name="update_name" value="<?php echo $fetch_update['name']; ?>" class="box" required placeholder="Digite o nome do produto">
       <input type="number" name="update_price" value="<?php echo $fetch_update['price']; ?>" min="0" class="box" required placeholder="Digite o preço do produto">
-      <input type="text" name="update_desc" value="<?php echo $fetch_update['descricao']; ?>" class="box" required placeholder="Digite uma descrição para o produto">
+      <input type="text" name="update_descricao" value="<?php echo $fetch_update['descricao']; ?>" class="box" required placeholder="Digite uma descrição para o produto">
+      <input type="text" name="update_categoria" value="<?php echo $fetch_update['id_categoria']; ?>" class="box" required placeholder="Digite uma descrição para o produto">
       <input type="file" class="box" name="update_image" accept="image/jpg, image/jpeg, image/png">
       <input type="submit" value="atualizar" name="update_product" class="btn" style="margin-bottom: 15px;">
       <input type="reset" value="cancelar" id="close-update" class="option-btn">

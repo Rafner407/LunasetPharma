@@ -8,7 +8,11 @@ if(isset($_POST['submit'])){
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
    $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
+   $image = $_FILES['image']['name'];
    $alerg = mysqli_real_escape_string($conn, $_POST['alergia']);
+   $image_size = $_FILES['image']['size'];
+   $image_tmp_name = $_FILES['image']['tmp_name'];
+   $image_folder = 'uploaded_img/'.$image;
 
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
 
@@ -18,7 +22,18 @@ if(isset($_POST['submit'])){
       if($pass != $cpass){
          $message[] = 'Senhas não combinam!';
       }else{
-         mysqli_query($conn, "INSERT INTO `users`(name, email, password, alergia) VALUES('$name', '$email', '$cpass', '$alerg')") or die('query failed');
+         mysqli_query($conn, "INSERT INTO `users`(name, email, password, image, alergia) VALUES('$name', '$email', '$cpass', '$image', '$alerg')") or die('query failed');
+
+         if($add_product_query){
+            if($image_size > 2000000){
+               $message[] = 'tamanho de imagem muito grande';
+            }else{
+               move_uploaded_file($image_tmp_name, $image_folder);
+            }
+         }else{
+            $message[] = 'não foi possível realizar o registro!';
+         }
+
          $message[] = 'registro sucedido!';
          header('location:login.php');
       }
@@ -68,7 +83,7 @@ if(isset($message)){
       <input type="email" name="email" placeholder="Digite seu email" required class="box">
       <input type="password" name="password" placeholder="Digite sua senha" required class="box">
       <input type="password" name="cpassword" placeholder="Confirme sua senha" required class="box">
-      <input type="file" class="box">
+      <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
       <select class="box" id="selection"  onChange="selectOnchange();">
          <option>Possui alergia a algum medicamento?</option>
          <option value="sim">sim</option>
