@@ -30,7 +30,7 @@ if(isset($message)){
          <img src="uploaded_img/LUNA.png" style="height: 40px; width: 40px; border-radius: 50%; float: right">
          </div>
          <div>
-         <a href="home.php" class="logo" style="color: black; float: left; margin-top: 7px;">Lunaset</a>
+         <a href="home.php" class="logo" style="color: black; float: left; margin-top: 7px;">Lunaset Pharma</a>
          </div>
          </div>
 
